@@ -6,7 +6,7 @@ on:
 
 jobs:
     build:
-      runs-on: [ self-hosted, windows ]
+      runs-on: [ linux ]
       #runs-on: [DCMTPVMTFS015]
       #timeout-minutes: 2
       steps:
