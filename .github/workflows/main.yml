@@ -1,0 +1,21 @@
+name: ExecuteTests
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "master" ]
+
+jobs:
+    build:
+      runs-on: [ self-hosted, windows ]
+      #runs-on: [DCMTPVMTFS015]
+      #timeout-minutes: 2
+      env:
+      steps:
+        - name: BrowserStack Action
+          uses: 'browserstack/github-actions@master'
+          with:
+            username:  test
+            access-key: test1234
+            build-name: 'test-testing'
+            project-name: 'test'
+
